@@ -1,12 +1,8 @@
 #Exam Programs Installer
-print("-----Exam Programs Installer-----")
+Write-Host"-----Exam Programs Installer-----"
 
-winget install --id Python.Python.3 --scope machine
-python -m pip install pandas
-python -m pip install matplotlib
-winget install --id TheDocumentFoundation.LibreOffice --scope machine
-winget install -- id JGraph.Draw --scope machine
+$version = "3.14.5"
+$url = "https//:python.org$version/python-$version-amd64.exe"
+$installerPath = "$env:TEMP\python-installer.exe"
+$targetDir = "$env:ProgramFiles\Python314"
 
-winget list --id python.Python.3
-winget list --id TheDocumentFoundation.LibreOffice
-winget list --id JGraph.Draw
