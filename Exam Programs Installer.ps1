@@ -22,13 +22,13 @@ Remove-Item -Path $installPath -Force
 # Environment Refresh (Safe method)
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
-Write-Host "Global Python installation complete!" -ForegroundColor Purple
+Write-Host "Global Python installation complete!" -ForegroundColor DarkMagenta
 & python --version
 
 Write-Host "Now installing Global Python Packages..." -ForegroundColor Magenta
 $pipArguments = "-m pip install --upgrade pandas matplotlib numpy"
 Start-Process -FilePath "python.exe" -ArgumentList $pipArguments -Wait -NoNewWindow
-Write-Host "Packages installed successfully!" -ForegroundColor Purple
+Write-Host "Packages installed successfully!" -ForegroundColor DarlMagenta
 
 
 # 2. LibreOffice Installer
