@@ -28,7 +28,7 @@ Write-Host "Global Python installation complete!" -ForegroundColor DarkMagenta
 Write-Host "Now installing Global Python Packages..." -ForegroundColor Magenta
 $pipArguments = "-m pip install --upgrade pandas matplotlib numpy"
 Start-Process -FilePath "python.exe" -ArgumentList $pipArguments -Wait -NoNewWindow
-Write-Host "Packages installed successfully!" -ForegroundColor DarlMagenta
+Write-Host "Packages installed successfully!" -ForegroundColor DarkMagenta
 
 
 # 2. LibreOffice Installer
